@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/v1/products';
+const API_URL = window.location.hostname == 'localhost' ? 'http://localhost:3000/api/v1/products' : 'https://cjs-store.herokuapp.com/api/v1/products';
 
 function getIdFromQuery() {
   const parts = window.location.search.match(/\?id=([0-9]+)/);
